@@ -50,16 +50,16 @@ def poser_enigme():
         {"question": "Je cours tout autour du pré sans jamais bouger. Qui suis-je?", "reponse": "cloture"}
     ]
 
-    for enigme in enigmes:
-        while True:
-            reponse_joueur = input(enigme["question"] + "\nVotre réponse : ")
-            if reponse_joueur.lower() != enigme["reponse"]:
-                print("Réponse incorrecte. Veuillez réessayer.")
-            else:
-                print("Bonne réponse !")
-                break
+    enigme = random.choice(enigmes)
+    while True:
+        reponse_joueur = input(enigme["question"] + "\nVotre réponse : ")
+        if reponse_joueur.lower() != enigme["reponse"]:
+            print("Réponse incorrecte. Veuillez réessayer.")
+        else:
+            print("Bonne réponse !")
+            break
 
-    print("Fin des énigmes.")
+    print("Fin de l'énigme.")
 
 nom_heroes = obtenir_details_heroes()
 
